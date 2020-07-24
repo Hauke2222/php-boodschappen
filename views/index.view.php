@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
+<?php require('partials/header.php');?>
 
 <body>
 
-    <ul>
-        <li><a class="active" href="">Home</a></li>
-        <li><a href="">News</a></li>
-    </ul>
+    <?php require('partials/nav.php');?>
 
     <h1></h1>
 
@@ -28,7 +19,7 @@
         <tr>
             <td><?php echo $boodschap["name"] ?></td>
             <td><?php echo $boodschap["price"] ?></td>
-            <td><input type="number" value="<?php echo $boodschap["quantity"]; ?>"></td>
+            <td><?php echo $boodschap["quantity"]; ?></td>
             <td><?php echo $boodschapPrijs = $boodschap["quantity"] * $boodschap["price"] ?></td>
         </tr>
             <?php $totalPrice += $boodschapPrijs ?>

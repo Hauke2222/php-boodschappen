@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Page Title</title>
-</head>
+<?php require('partials/header.php');?>
 
 <body>
 
-    <ul>
-        <li><a class="active" href="">Home</a></li>
-        <li><a href="">News</a></li>
-    </ul>
+    <?php require('partials/nav.php');?>
 
     <form action="/action_page.php" method="get" id="nameform">
         <label for="fname">First name:</label>
