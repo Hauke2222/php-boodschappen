@@ -14,7 +14,7 @@
             <th>Totaal</th>
         </tr>
         <?php $totalPrice = 0 ?>
-        <?php foreach($boodschappen as $key => $boodschap) { ?>
+        <?php foreach($boodschappen_from_database as $boodschap) { ?>
             <?php $boodschapPrijs = 0 ?>
         <tr>
             <td><?php echo $boodschap["name"] ?></td>
