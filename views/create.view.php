@@ -5,13 +5,17 @@
     <?php require('partials/nav.php');?>
 
     <form action="/action_page.php" method="get" id="nameform">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname">
-    </form>
+        <br>
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="fname">
+        
+        <label for="quantity">Aantal:</label>
+        <input type="number" id="quantity" name="fname">
+        
+        <label for="price">Prijs:</label>
+        <input type="number" id="price" name="fname">
 
-    <p>The button below is outside the form element, but still part of the form.</p>
+    </form>
 
     <button type="submit" form="nameform" value="Submit">Submit</button>
 
