@@ -17,10 +17,10 @@
         <?php foreach($boodschappen_from_database as $boodschap) { ?>
             <?php $boodschapPrijs = 0 ?>
         <tr>
-            <td><?php echo $boodschap["name"] ?></td>
-            <td><?php echo $boodschap["price"] ?></td>
-            <td><?php echo $boodschap["quantity"]; ?></td>
-            <td><?php echo $boodschapPrijs = $boodschap["quantity"] * $boodschap["price"] ?></td>
+            <td><?php echo $boodschap->name; ?></td>
+            <td><?php echo $boodschap->price; ?></td>
+            <td><?php echo $boodschap->number; ?></td>
+            <td><?php echo $boodschapPrijs = $boodschap->number * $boodschap->price ?></td>
         </tr>
             <?php $totalPrice += $boodschapPrijs ?>
         <?php } ?>

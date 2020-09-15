@@ -4,20 +4,22 @@
 
     <?php require('partials/nav.php');?>
 
-    <form action="/action_page.php" method="get" id="nameform">
+    <form action="add_grocery" method="POST">
         <br>
-        <label for="name">Naam:</label>
-        <input type="text" id="name" name="fname">
+        <label for="name">Product:</label>
+        <input type="text" id="name" name="name">
         
-        <label for="quantity">Aantal:</label>
-        <input type="number" id="quantity" name="fname">
+        <label for="number">Aantal:</label>
+        <input type="number" id="number" name="number">
         
         <label for="price">Prijs:</label>
-        <input type="number" id="price" name="fname">
+        <input type="number" id="price" name="price">
+
+        <button type="submit" form="nameform" value="Submit">Submit</button>
 
     </form>
+    <br>
 
-    <button type="submit" form="nameform" value="Submit">Submit</button>
 
 </body>
 
