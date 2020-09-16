@@ -15,7 +15,7 @@
         <label for="price">Prijs:</label>
         <input type="number" id="price" name="price">
 
-        <button type="submit" form="nameform" value="Submit">Submit</button>
+        <button type="submit" value="Submit">Submit</button>
 
     </form>
     <br>

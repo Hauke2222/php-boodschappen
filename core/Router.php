@@ -20,13 +20,35 @@ class Router {
         $this->routes['POST'][$uri] = $controller;
     }
 
-    public function direct($uri, $requestType) {
+    public function direct($uri, $requestType)
+    {
         if (array_key_exists($uri, $this->routes[$requestType])) {
-            return $this->routes[$requestType][$uri];
+            return $this->callAction(
+                ...explode('@', $this->routes[$requestType][$uri])
+            );
         }
-        throw new Exception ('No route defined for this URI.');
+
+        throw new Exception('No route defined for this URI.');
     }
 
-}
+    /**
+     * Load and call the relevant controller action.
+     *
+     * @param string $controller
+     * @param string $action
+     */
+    protected function callAction($controller, $action)
+    {
+        $controller = "{$controller}";
+        $controller = new $controller;
 
+        if (! method_exists($controller, $action)) {
+            throw new Exception(
+                "{$controller} does not respond to the {$action} action."
+            );
+        }
+
+        return $controller->$action();
+    }
+}
 ?>

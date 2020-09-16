@@ -2,16 +2,24 @@
 
 $boodschappen_from_database = $app['database']->selectAll('groceries');
 
-function create() {
-    App::get('database')->insert('groceries', [
-        'name' => $_POST['name'],
-        'number' => $_POST['number'],
-        'price' => $_POST['price']
-    ]);
+class GroceriesController {
 
-    return redirect('groceries');
+    public function home() {
+        require 'views/index.view.php';
+    }
+
+    public function create() {
+        return var_dump($_POST);
+        App::get('database')->insert('groceries', [
+            'name' => $_POST['name'],
+            'number' => $_POST['number'],
+            'price' => $_POST['price']
+        ]);
+
+        return redirect('/');
+    }
 }
 
-require 'views/index.view.php'; 
+ 
 
 ?>

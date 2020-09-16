@@ -5,9 +5,9 @@
     'groceries' => './controllers/GroceriesController.php',
     'groceries/create' => './controllers/GroceriesControllerCreateView.php',
 ]); */
-$router->get('', './controllers/GroceriesController.php');
-$router->get('groceries', './controllers/GroceriesController.php');
-$router->get('groceries/create', './controllers/GroceriesControllerCreateView.php');
-$router->post('add_grocery', './controllers/GroceriesController@create');
+$router->get('', './controllers/GroceriesController@home');
+$router->get('groceries', './controllers/GroceriesController@home');
+$router->get('groceries/create', './controllers/GroceriesControllerCreateView@form_page');
+$router->post('groceries/add_grocery', './controllers/GroceriesController@create');
 
 ?>
