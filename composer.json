@@ -1,0 +1,12 @@
+{
+    "name": "hauke/php-boodschappen",
+    "require": {},
+    "description": "test",
+
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+        
+    }
+}
