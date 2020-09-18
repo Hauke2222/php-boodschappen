@@ -7,16 +7,17 @@ namespace Composer\Autoload;
 class ComposerStaticInitfa9e7c9458dafb57138f98872bd530f0
 {
     public static $classMap = array (
+        'App\\Controllers\\GroceriesController' => __DIR__ . '/../..' . '/app/controllers/GroceriesController.php',
+        'App\\Controllers\\GroceriesControllerCreateView' => __DIR__ . '/../..' . '/app/controllers/GroceriesControllerCreateView.php',
+        'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
+        'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
+        'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
+        'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'ComposerAutoloaderInitfa9e7c9458dafb57138f98872bd530f0' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitfa9e7c9458dafb57138f98872bd530f0' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
-        'GroceriesController' => __DIR__ . '/../..' . '/controllers/GroceriesController.php',
-        'GroceriesControllerCreateView' => __DIR__ . '/../..' . '/controllers/GroceriesControllerCreateView.php',
         'Grocery' => __DIR__ . '/../..' . '/grocery.php',
-        'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
-        'Request' => __DIR__ . '/../..' . '/core/Request.php',
-        'Router' => __DIR__ . '/../..' . '/core/Router.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

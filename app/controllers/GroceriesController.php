@@ -1,21 +1,25 @@
 <?php 
 
+namespace App\Controllers;
+use App\Core\App;
+Use Redirect;
+
 class GroceriesController {
 
     public function home() {
-        $boodschappen_from_database = $app['database']->selectAll('groceries');
-        require 'views/index.view.php';
+        $boodschappen_from_database = App::get('database')->selectAll('groceries');
+        require 'app/views/index.view.php';
     }
 
     public function create() {
         //return var_dump($_POST);
-        $app['database']->insert('groceries', [
+        App::get('database')->insert('groceries', [
             'name' => $_POST['name'],
             'number' => $_POST['number'],
             'price' => $_POST['price']
         ]);
 
-        return redirect('/');
+        header('Location: /');
     }
 }
 
